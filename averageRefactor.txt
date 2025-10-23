@@ -1,16 +1,3 @@
---- Before (Old Implementation)
-public class AgeUtils {
-
-    // Misleading name and vague variables
-    public double magicNumber(List<Integer> x) {
-        int y = 0;
-        for (int i : x) {
-            y += i;
-        }
-        return y / x.size();  // ⚠️ risk of division by zero
-    }
-}
-
 --- After (Refactored Implementation)
 public class AgeUtils {
 
@@ -30,5 +17,18 @@ public class AgeUtils {
 
         double averageAge = (double) total / ages.size();
         return averageAge;
+    }
+}
+
+--- Before (Old Implementation)
+public class AgeUtils {
+
+    // Misleading name and vague variables
+    public double magicNumber(List<Integer> x) {
+        int y = 0;
+        for (int i : x) {
+            y += i;
+        }
+        return y / x.size();  // ⚠️ risk of division by zero
     }
 }
